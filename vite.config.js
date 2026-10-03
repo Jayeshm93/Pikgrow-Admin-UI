@@ -29,6 +29,37 @@ export default defineConfig({
         target: 'http://127.0.0.1:9000',
         changeOrigin: true,
       },
+      '/api/v1/analytics': {
+        target: 'http://127.0.0.1:9000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/v1\/analytics/, ''),
+      },
+      '/dashboard': {
+        target: 'http://127.0.0.1:9000',
+        changeOrigin: true,
+      },
+      '/crops': {
+        target: 'http://127.0.0.1:9000',
+        changeOrigin: true,
+      },
+      '/analytics': {
+        target: 'http://127.0.0.1:9000',
+        changeOrigin: true,
+      },
+      '/api': {
+        target: 'http://127.0.0.1:9000',
+        changeOrigin: true,
+      },
+      '/admin': {
+        target: 'http://127.0.0.1:9000',
+        changeOrigin: true,
+        autoRewrite: true,
+        cookieDomainRewrite: '',
+      },
+      '/statics': {
+        target: 'http://127.0.0.1:9000',
+        changeOrigin: true,
+      },
     },
   },
 });
